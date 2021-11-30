@@ -1,0 +1,42 @@
+#header {
+    background-color: white;
+    color:black;
+    box-shadow:0px 0px 3px 0px green;
+}
+#header a:link, #header a:visited {
+    color:green;
+}
+#module h2, .module caption, .inline-group h2 {
+   
+    background: green;
+    
+}
+
+#content-related .module h2 {
+    background: none;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px
+ solid green;
+    font-size: 18px;
+    color:white;
+    background-color:green;
+}
+
+#button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background:green;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+div.breadcrumbs{
+    background-color: green !important;
+}
+div.breadcrumbs a{
+    color: white !important;
+}
+#content{
+    color:green;
+}

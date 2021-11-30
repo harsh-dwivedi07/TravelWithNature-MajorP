@@ -1,0 +1,355 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Swiper -->
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+  <!-- css -->
+  <link rel="stylesheet" href="{% static 'style/style.css' %}">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/b203dc9eba.js" crossorigin="anonymous"></script>
+
+
+
+  <!-- google font -->
+
+  <!-- main photo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">Travel with Nature</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#Vission">Vission</a></li>
+          <li><a class="nav-link scrollto " href="#Gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#contact-us">Contact</a></li>
+          {% if user.is_authenticated %}
+          <li>Hello,{{user.first_name}}</li>
+          <li><a class="nav-link scrollto" href="accounts/logout">Logout</a></li>
+          {% else %}
+          
+          <li><a class="nav-link scrollto" href="accounts/login">Login</a></li>
+          
+          <li><a class="nav-link scrollto" href="accounts/register">Register</a></li>
+          
+          {% endif %}
+          
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Travel with Nature</span></h2>
+          <p class="animate__animated fanimate__adeInUp">It is not so much for its beauty that the forest makes a claim upon men’s hearts, as for that subtle something, that quality of air that emanation from old trees, that so wonderfully changes and renews a weary spirit. —Robert Louis Stevenson</p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
+          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus
+            repellendus deleniti vel. Minus et tempore modi architecto.</p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
+          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus
+            repellendus deleniti vel. Minus et tempore modi architecto.</p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+  </section><!-- End Hero -->
+
+  
+
+
+<!-- our-vission -->
+  <div class="our-vission" id="our-vission">
+
+    <div class="row-one">
+      <div class="column-1">
+        <h2>Travel <br> with Nature</h1>
+        <p>70 words made by unscrambling the letters from isump (impsu).
+          The unscrambled words are valid in Scrabble. Use the word unscrambler
+           to unscramble more anagrams with some of the letters in isump.70 words
+           made by unscrambling the letters from isump (impsu). The unscrambled</p>
+
+        <ul>
+          <li class="btn_dot "></li>
+          <li class="btn_dot "></li>
+          <li class="btn_dot "></li>
+        </ul>
+      </div>
+      <div class="column-2">
+        <img src="{% static 'images/ourvission-1.jpg' %}" id="banner" alt="">
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Gallery section -->
+  <div class="Most-visited-places">
+    <div class="Most-visited-places-heading">
+      <h1>Gallery Section------------------ </h1>
+    </div>
+
+
+   <div class="Most-visited-places-material">
+     <div class="Most-visited-places-content">
+       <h2>Why To Visit?</h2>
+       <h4>The time in the system-generated qualified name is the same for
+         all temporary data sets in a job. Therefore, if the same temporary data
+          set name appears more than once in a job, the system might create duplicate
+          data set names</h4>
+     </div>
+     <div class="photo1">
+       <img id="slide-photo" src="{% static 'images/ourvission-2.jpg' %}" alt="Photo">
+     </div>
+   </div>
+
+    <div class="Most-visited-places-button">
+      <button type="button" name="button" class="button-Most-visited-places prev" onclick="changedestinationprev()">
+        <- </button>
+          <button type="button" name="button" class="button-Most-visited-places next" onclick="changedestinationnext()"> -> </button>
+    </div>
+   
+  </div>
+
+
+ </div>
+
+  <!-- swiper -->
+
+  <div class="review">
+
+
+  <div class="review-heading">
+    <h4>TESTIMONIALS ---------------------------------</h3>
+    <h2>WHAT THEY ARE SAYING ABOUT US</h2>
+
+  </div>
+  <div class="review-section">
+
+  <div class="swiper mySwiper">
+    
+      <div class="swiper-wrapper">
+        {% for test in testim %}
+        <div class="swiper-slide">
+          <div class="review-content">
+            <p>{{test.cdesc}}</p>
+          </div>
+          <div class="reviewer-img">
+            <img src="{{test.cimg.url}}" />
+          </div>
+          <div class="reviewer-name">
+            <p>{{test.cname}}</p>
+          </div>
+
+        </div>
+        {% endfor %}
+      </div>
+      
+      <div class="swiper-pagination"></div>
+    </div>
+</div>
+</div>
+
+  <!-- dynamic places -->
+  <div class="content-gallery" id="Gallery">
+    <div class="content-gallery-heading">
+      <h1>Places To Visit--------------------</h1>
+    </div>
+    <div class="gallery-container">
+      {% for place in place %}
+      <div class="box">
+        <div class="img-box">
+          <img src="{{place.place_img.url}}" alt="">
+        </div>
+        <div class="content">
+          <h3>{{place.place_name}}</h3>
+          <p>({{place.place_city}}/{{place.place_state}})</p>
+
+          <p>{{place.place_desc}}</p>
+
+        </div>
+      </div>
+      {% endfor %}
+      
+      
+      
+      
+
+
+
+    </div>
+
+    <!-- contact us section       -->
+    <div class="contact-us" id="contact-us">
+
+      <div class="detaials contact-us-background">
+        <div class="detaials-heading ">
+          <h2>Travel with nature</h2>
+        </div>
+        <div class="detaials-content">
+          <p>Travel With Nature Holidays”, the best travel agents in Kashmir,
+            is taking care of your travel needs under one roof making the tour of
+            our guests more secure, attractive, affordable and fascinating, Travel
+            with Nature Holidays is Local Travel Agents in Srinagar, Kashmir.</p>
+        </div>
+
+      </div>
+      <div class="detaials contact-us-background">
+        <div class="detaials-heading">
+          <h2>Travel with nature</h2>
+        </div>
+        <div class="detaials-content">
+          <p>3rd Floor, Wani Manzil Lambert Lane, Residency Road Srinagar Kashmir-190001, J & K (India).</p>
+        </div>
+      </div>
+      <div class="detaials contact-us-background">
+        <div class="detaials-heading">
+          <h2>Travel with nature</h2>
+        </div>
+        <div class="detaials-content">
+          <p>Tel: +91 9796999400, 9858779285, 9149559925</p>
+          <p>Email: travelwithnature@gmail.com</p>
+        </div>
+      </div>
+     
+
+    </div>
+
+    <!-- footer extra -->
+    <footer id="footer">
+      <div class="container">
+        <h3>Travel With Nature</h3>
+        <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+        <div class="social-links">
+          <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+          <a href="#" class="twitter"><i class="fab fa-instagram-square"></i></a>
+          <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+          <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+          <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
+          <a href="#" class="instagram"><i class="fab fa-twitter-square"></i></a>
+
+         
+        </div>
+        <div class="copyright">
+          &copy; Copyright <strong><span>Travel with Nature</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          
+        </div>
+      </div>
+    </footer><!-- End Footer -->
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+    <!-- Swiper -->
+    <script type="module">
+
+    import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
+    var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+              rotate: 20,
+              stretch: 0,
+              depth: 400,
+              modifier: 1,
+              slideShadows: true,
+            },
+
+            pagination: {
+              el: ".swiper-pagination",
+            },
+            loop: true,
+            autoplay:{
+              delay:2000,
+              disableOnInteraction:false,
+            }
+          });
+
+
+
+    </script>
+
+
+</body>
+
+</html>
