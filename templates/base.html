@@ -1,0 +1,112 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Swiper -->
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+  <!-- css -->
+  <link rel="stylesheet" href="{% static 'style/style.css' %}">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/b203dc9eba.js" crossorigin="anonymous"></script>
+
+
+
+  <!-- google font -->
+
+  <!-- main photo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="{% url 'home' %}">Travel with Nature</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{% url 'home' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="#Vission">Vision</a></li>
+          <li><a class="nav-link scrollto " href="places/">Places</a></li>
+          <li><a class="nav-link scrollto" href="#contact-us">Contact</a></li>
+          {% if user.is_authenticated %}
+          <li>Hello,{{user.first_name}}</li>
+          <li><a class="nav-link scrollto" href="accounts/logout">Logout</a></li>
+          {% else %}
+          
+          <li><a class="nav-link scrollto" href="accounts/login">Login</a></li>
+          
+          <li><a class="nav-link scrollto" href="accounts/register">Register</a></li>
+          
+          {% endif %}
+          
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  {% block content %}
+
+  {% endblock %}
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+    <!-- Swiper -->
+    <script type="module">
+
+    import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
+    var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+              rotate: 20,
+              stretch: 0,
+              depth: 400,
+              modifier: 1,
+              slideShadows: true,
+            },
+
+            pagination: {
+              el: ".swiper-pagination",
+            },
+            loop: true,
+            autoplay:{
+              delay:2000,
+              disableOnInteraction:false,
+            }
+          });
+
+
+
+    </script>
+
+
+</body>
+
+</html>

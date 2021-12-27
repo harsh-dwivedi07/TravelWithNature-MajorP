@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Places</title>
+  <!-- css -->
+  <link rel="stylesheet" href="{% static 'style/places.css' %}">
+  <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/b203dc9eba.js" crossorigin="anonymous"></script>
+
+    <!-- //css files -->
+ <!-- css -->
+ <link rel="stylesheet" href="{% static 'style/style.css' %}">
+ <!-- bootstrap -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <!-- font awesome -->
+ <script src="https://kit.fontawesome.com/b203dc9eba.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="{% url 'home' %}">Travel with Nature</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{% url 'home' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="#Vision">Vision</a></li>
+          <li><a class="nav-link scrollto " href="{% url 'places' %}">Places</a></li>
+          <li><a class="nav-link scrollto" href="#contact-us">Contact</a></li>
+          {% if user.is_authenticated %}
+          <li>Hello,{{user.first_name}}</li>
+          <li><a class="nav-link scrollto" href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+          
+          <li><a class="nav-link scrollto" href="{% url 'login' %}">Login</a></li>
+          
+          <li><a class="nav-link scrollto" href="{% url 'register' %}">Register</a></li>
+          
+          {% endif %}
+          
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<!-- background -->
+<div class="place-background">
+  <div class="place-background-content">
+    <h1>Welcome to Travel with Nature</h1>
+    <p>It is not so much for its beauty that the forest makes a claim upon men’s hearts,<br> as for that subtle something, that quality of air that emanation from old trees,<br> that so wonderfully changes and renews a weary spirit.<br> —Robert Louis Stevenson</p>
+  </div>
+
+</div>
+
+<!-- destination -->
+<div class="Destinations-Details">
+    <h1>EXPLORE OUR COUNTRY</h1>
+</div>
+
+<div class="Destinations"  id="Destinations">
+
+  <div class="city">
+    <div class="city-image">
+      <img src="{% static 'images/ourvission-1.jpg' %}" alt="background image">
+    </div>
+    <div class="city-content">
+      <h2>Destination Name</h2>
+      <p>City,Location</p>
+      <p>We take this opportunity to thank our teachers and friends who helped us
+        throughout the project. First and foremost we would like to thank my guide for the project</p>
+    </div>
+    <div class="city-button">
+      <button type="button" class="btn btn-dark">VIEW DETAILS</button>
+    </div>
+  </div>
+
+  <div class="city">
+    <div class="city-image">
+      <img src="{% static 'images/ourvission-1.jpg' %}" alt="background image">
+    </div>
+    <div class="city-content">
+      <h2>Uttar Pradesh</h2>
+      <p>We take this opportunity to thank our teachers and friends who helped us
+        throughout the project. First and foremost we would like to thank my guide for the project</p>
+    </div>
+    <div class="city-button">
+      <button type="button" class="btn btn-dark">VIEW DETAILS</button>
+    </div>
+  </div>
+
+  <div class="city">
+    <div class="city-image">
+      <img src="{% static 'images/ourvission-1.jpg' %}" alt="background image">
+    </div>
+    <div class="city-content">
+      <h2>Uttar Pradesh</h2>
+      <p>We take this opportunity to thank our teachers and friends who helped us
+        throughout the project. First and foremost we would like to thank my guide for the project</p>
+    </div>
+    <div class="city-button">
+      <button type="button" class="btn btn-dark">VIEW DETAILS</button>
+    </div>
+  </div>
+
+  <div class="city">
+    <div class="city-image">
+      <img src="{% static 'images/ourvission-1.jpg' %}" alt="background image">
+    </div>
+    <div class="city-content">
+      <h2>Uttar Pradesh</h2>
+      <p>We take this opportunity to thank our teachers and friends who helped us
+        throughout the project. First and foremost we would like to thank my guide for the project</p>
+    </div>
+    <div class="city-button">
+      <button type="button" class="btn btn-dark">VIEW DETAILS</button>
+    </div>
+  </div>
+</div>
+
+<!-- pagination -->
+<div class="places-pagination">
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#" class="active">2</a>
+    <a href="#">3</a>
+    <a href="#">&raquo;</a>
+  </div>
+</div>
+
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Travel With Nature</h3>
+      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <div class="social-links">
+        <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+        <a href="#" class="twitter"><i class="fab fa-instagram-square"></i></a>
+        <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+        <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+        <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
+        <a href="#" class="instagram"><i class="fab fa-twitter-square"></i></a>
+
+        <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Travel with Nature</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,639 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+  position: relative;
+  height: 100%;
+
+}
+
+
+/* navbar */
+
+#header .navbar-container .navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background:transparent;
+}
+#header .navbar-container .logo {
+  float: left;
+  margin-left: 15%;
+  padding-top: 15px;
+}
+#header .navbar-container{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#header .navbar-container .navbar ul{
+  margin-left: 45%;
+  padding-top: 13px;
+
+
+}
+#header .navbar-container .navbar ul li {
+  float: right;
+  margin:3px;
+
+}
+
+#header  .navbar-container .navbar ul a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#header .navbar-container .navbar ul li a:hover {
+  background-color: #ef6603;
+  border-radius: 70%;
+
+}
+
+
+
+#header .navbar-container .logo  a{
+  color: White;
+  text-decoration: none;
+}
+
+/* place-background */
+.place-background{
+width: 100%;
+
+background-image: url("images/pexels-pixabay-355321.jpg");
+background-size: cover;
+padding: 0;
+height: 700px;
+}
+
+
+.place-background .place-background-content{
+  color: white;
+  text-align: center;
+  padding-top: 20%;
+
+
+}
+.place-background .place-background-content h1{
+  font-size: 50px;
+}
+.place-background .place-background-content p{
+  line-height: 150%;
+  font-size: 20px;
+}
+/* Destination Detail */
+
+.Destination .Destination_detail{
+  width: 100%;
+
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5%;
+}
+.Destination .Destination_detail{
+
+}
+.Destination .Destination_detail .Destination_info{
+  width:700px;
+  height:1000px;
+  background-color: #D3E4CD;
+
+
+
+}
+.Destination .Destination_detail .Destination_info .Destination_info_content{
+  text-align: center;
+}
+.Destination .Destination_detail .Destination_info .Destination_info_img{
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    padding: 5%
+}
+
+.Destination .Destination_detail .Destination_info .Destination_info_img img{
+  height: 80%;
+  width:  85%;
+
+}
+.Destination .Destination_detail .CouchSurfing_info{
+  width:400px;
+  height:1000px;
+  background-color: #99A799;
+  /* text-align: center; */
+  padding: 3%;
+
+
+}
+.Destination .Destination_detail .CouchSurfing_info  img{
+  height: 40%;
+  width: 100%;
+
+}
+.Destination .Destination_detail .CouchSurfing_info  td{
+   width: 100%;
+   height: 60px;
+
+}
+
+/* footer */
+#footer {
+  background: #14151c;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+}
+#footer h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+#footer p {
+  font-size: 15;
+  font-style: italic;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+#footer .social-links {
+  margin: 0 0 40px 0;
+}
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #ef6603;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+#footer .social-links a:hover {
+  background: #bd5102;
+  color: #fff;
+  text-decoration: none;
+}
+#footer .copyright {
+  margin: 0 0 5px 0;
+}
+#footer .credits {
+  font-size: 13px;
+}
+
+
+/** MODAL BODY DESIGN STARTED**/
+.car-model-2 .modal-raw {
+  display: flex;
+  background: #fff;
+}
+
+.car-model-2 .modal-left, .modal-right {
+  flex: 1;
+}
+
+.car-model-2 .car-modal .modal-left {
+  padding: 0;
+  background: #535353;
+  color: #fff;
+}
+
+.car-model-2 .car-modal .modal-content {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.car-model-2 .car-modal .modal-header {
+  background: transparent;
+  border: none;
+  padding: 15px 0;
+}
+
+.car-model-2 .car-modal .modal-header .modal-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.car-model-2 .car-modal .modal-header p {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.car-model-2 .car-modal .modal-header .close,
+.car-modal .modal-header .close:focus {
+  padding: 8px 13px;
+  outline: none;
+  margin: -60px -1px -15px auto;
+  background: #3a3a3a;
+  opacity: 1;
+  color: #FFF;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.car-model-2 .car-modal .modal-body {
+  padding: 0 15px;
+  background: #fff;
+}
+
+.car-model-2 .modal-right {
+  padding: 0;
+}
+
+.car-model-2 .modal-left{
+  padding: 0;
+}
+
+#modalCarousel .carousel-item {
+  max-height: 240px;
+}
+
+.car-model-2 .modal-left-content {
+  background: #fff;
+}
+
+.car-model-2 .modal-left-content img {
+  width: 100%!important;
+  height: 100%!important;
+}
+
+.car-model-2 .modal-left-content .control {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  text-align: center;
+  color: #FFF;
+  font-size: 24px;
+  line-height: 30px;
+  bottom: 0px;
+  opacity: .5;
+}
+
+.car-model-2 .modal-left-content .carousel-inner {
+  display: flex;
+}
+
+.car-model-2 .modal-left-content .carousel-inner .item {
+  flex: 1;
+  width: 100%;
+}
+
+.car-model-2 .modal-left-content .carousel-inner .item img{
+  width: 100%;
+}
+
+.car-model-2 .modal-left-content iframe {
+  border: none;
+  width: 100%;
+  display: block;
+}
+
+.car-model-2 .modal-left-content .control:hover {
+  opacity: 1;
+}
+
+.car-model-2 .modal-left-content .control-prev {
+  right: 30px;
+}
+
+.car-model-2 .modal-left-content .control-next {
+  right: 0;
+}
+
+.car-model-2 .modal-left-content .description {
+  padding: 30px 30px 45px;
+}
+
+.car-model-2 .modal-left-content p {
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 0;
+}
+
+.car-model-2 .modal-left-content .description h3 {
+  font-size: 20px;
+  margin: 0 0 15px;
+  font-weight: 600;
+}
+
+.car-model-2 .modal-right-content .bullets {
+  color: #535353;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0px;
+  margin-bottom: 20px;
+  columns: 2;
+}
+
+.car-model-2 .modal-right-content .bullets li {
+  margin-bottom: 5px;
+  position: relative;
+  list-style: none;
+  padding-left: 0;
+}
+
+.car-model-2 .modal-right-content .bullets li i {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.car-model-2 .modal-right-content {
+  padding: 30px;
+  background: #fff;
+}
+
+.car-model-2 .modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 0 15px 20px;
+}
+
+.car-model-2 .modal-backdrop.show {
+  opacity: 0.7;
+}
+
+.car-model-2 .modal-header {
+  background: transparent;
+  border: none;
+  padding: 5px 0;
+}
+
+.car-model-2 .modal-content {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.car-model-2 .modal-right-content h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 15px;
+}
+
+.car-model-2 .modal-right-content dl {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #535353;
+}
+
+.car-model-2 .modal-right-content dl dt {
+  float: left;
+  font-weight: 500;
+}
+
+.car-model-2 .modal-right-content dl dd {
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+.car-model-2 .modal{
+  z-index: 9999;
+}
+
+.car-model-2 .ratings-box {
+  margin-right: 4px;
+  padding: 4px 10px;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.car-model-2 .ratings-box {
+  color: #fff!important;
+}
+
+.car-model-2 .ratings-2 i {
+  color: orange;
+}
+
+.car-model-2 .ratings-2{
+  font-size: 14px;
+  color: #fff!important;
+  font-weight: 400;
+}
+
+.car-model-2 .modal-body .btn-md {
+  padding: 9px 25px 7px 25px;
+  letter-spacing: 1px;
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+.car-model-2 h4{
+  color: #fff;
+  font-weight: 400;
+}
+
+.modalLabel-2{
+  display: none;
+}
+
+.car-model-2 h5{
+  font-size: 15px;
+  color: #fff;
+}
+
+.car-model-2 .item{
+  position: relative;
+}
+
+.car-model-2 .sobuz {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.car-model-2 .close{
+  opacity: 1!important;
+  background: #fff;
+  color: #000;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0;
+}
+
+.car-model-2 .modal-dialog {
+  margin: 10px auto;
+}
+
+.car-model-2 .price-box {
+  text-align: left;
+  font-size: 25px;
+  position: inherit;
+  left: 0;
+  bottom: 30px;
+  font-weight: 600;
+  opacity: 1;
+  font-family: 'Roboto', sans-serif;
+}
+
+.car-model-2 img{
+  width: 100%;
+}
+/** MODAL BODY DESIGN ENDED **/
+
+.car-details-sliders .carousel-indicators {
+  margin-left: initial;
+  margin-top: 0;
+}
+
+.car-details-sliders .carousel-indicators a {
+  cursor: pointer;
+}
+
+.car-details-sliders .carousel-indicators > li {
+  height: initial;
+  text-indent: initial;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.dd.car-details-sliders .carousel-indicators > li {
+  width: initial;
+  height: initial;
+  text-indent: initial;
+}
+
+.car-details-sliders .list-inline {
+  width: 100%;
+  bottom: 10px;
+  position: absolute;
+}
+
+.car-details-sliders .list-inline a{
+  margin-right: 0;
+}
+
+.car-properties .list-inline-item {
+  width: 80px;
+  margin: 5px!important;
+  border-radius: 5%;
+}
+
+.car-properties .list-inline-item a img {
+  width: 100%;
+  border: none;
+  border-radius: 5%;
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.82);
+}
+
+.car-details-sliders .carousel-indicators > li.active img {
+  opacity: 0.7;
+}
+
+.car-details-sliders .right {
+  position: absolute;
+  right: 15px;
+  top: 45%;
+}
+
+.car-details-sliders .left {
+  left: 10px;
+  top: 47%;
+  width: 30px;
+  height: 30px;
+  line-height: 33px;
+  position: absolute;
+  z-index: 5;
+  display: inline-block;
+  right: -30px;
+  text-align: center;
+  background: #a5a5a5;
+  border-radius: 5%;
+}
+
+.car-details-sliders .left i {
+  font-size: 20px;
+  color: #4d4d4d;
+}
+
+.car-details-sliders .right {
+  right: 10px;
+  top: 47%;
+  width: 30px;
+  height: 30px;
+  line-height: 33px;
+  position: absolute;
+  z-index: 5;
+  display: inline-block;
+  text-align: center;
+  background: #a5a5a5;
+  border-radius: 5%;
+}
+
+.car-details-sliders .right i {
+  font-size: 20px;
+  color: #4d4d4d;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 1px;
+}
+
+.car-properties {
+  width: 100%;
+}
+/** Carousel indicators section start **/
+.carousel-indicators-section{
+  background: red;
+  display: inline-block;
+  width: 100%;
+}
+
+.carousel-indicators-section .car-properties .list-inline-item {
+  width: 20%;
+  margin: 0!important;
+  border-radius: 0!important;
+}
+
+.carousel-indicators-section .list-inline-item a img {
+  border-radius: 0;
+}
+
+.carousel-item img{
+  width: 100%;
+}
+
+.carousel-indicators-section .carousel-indicators > li {
+  height: initial;
+  text-indent: initial;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.carousel-indicators-section .list-inline {
+  width: 100%;
+  bottom: inherit;
+  position: absolute;
+}
+
+.carousel-indicators-section .carousel-indicators {
+  margin-left: initial;
+  margin-top: 0;
+  position: relative;
+}

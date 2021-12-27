@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'mmain.apps.MmainConfig',
     'accounts.apps.AccountsConfig',
+    'places.apps.PlacesConfig',
 
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
