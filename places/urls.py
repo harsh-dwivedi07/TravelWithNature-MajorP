@@ -5,6 +5,6 @@ from mmain import views as v
 
 urlpatterns = [
     path('', views.places, name='places'),
-    path('destination',views.destination,name='destination'),
+    path('<int:id>',views.destination,name='destination'),
     
 ]

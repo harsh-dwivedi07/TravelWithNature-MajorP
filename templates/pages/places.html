@@ -72,74 +72,49 @@
 </div>
 
 <div class="Destinations"  id="Destinations">
-
+{% for place in place %}
   <div class="city">
     <div class="city-image">
-      <img src="{% static 'images/ourvission-1.jpg' %}" alt="background image">
+      <img src="{{ place.place_mainimg.url }}" alt="background image">
     </div>
     <div class="city-content">
-      <h2>Destination Name</h2>
-      <p>City,Location</p>
-      <p>We take this opportunity to thank our teachers and friends who helped us
-        throughout the project. First and foremost we would like to thank my guide for the project</p>
+      <h2>{{place.place_name}}</h2>
+      <p>{{place.place_city}},{{place.place_state}}</p>
+      <p>{{place.place_smdesc}}</p>
     </div>
     <div class="city-button">
-      <button type="button" class="btn btn-dark">VIEW DETAILS</button>
+      <a href ="{% url 'destination' place.id %}" >VIEW DETAILS</a>
     </div>
   </div>
+{% endfor %}
+  
 
-  <div class="city">
-    <div class="city-image">
-      <img src="{% static 'images/ourvission-1.jpg' %}" alt="background image">
-    </div>
-    <div class="city-content">
-      <h2>Uttar Pradesh</h2>
-      <p>We take this opportunity to thank our teachers and friends who helped us
-        throughout the project. First and foremost we would like to thank my guide for the project</p>
-    </div>
-    <div class="city-button">
-      <button type="button" class="btn btn-dark">VIEW DETAILS</button>
-    </div>
-  </div>
+  
 
-  <div class="city">
-    <div class="city-image">
-      <img src="{% static 'images/ourvission-1.jpg' %}" alt="background image">
-    </div>
-    <div class="city-content">
-      <h2>Uttar Pradesh</h2>
-      <p>We take this opportunity to thank our teachers and friends who helped us
-        throughout the project. First and foremost we would like to thank my guide for the project</p>
-    </div>
-    <div class="city-button">
-      <button type="button" class="btn btn-dark">VIEW DETAILS</button>
-    </div>
-  </div>
-
-  <div class="city">
-    <div class="city-image">
-      <img src="{% static 'images/ourvission-1.jpg' %}" alt="background image">
-    </div>
-    <div class="city-content">
-      <h2>Uttar Pradesh</h2>
-      <p>We take this opportunity to thank our teachers and friends who helped us
-        throughout the project. First and foremost we would like to thank my guide for the project</p>
-    </div>
-    <div class="city-button">
-      <button type="button" class="btn btn-dark">VIEW DETAILS</button>
-    </div>
-  </div>
+  
 </div>
 
 <!-- pagination -->
 <div class="places-pagination">
+  {% if place.has_other_pages %}
   <div class="pagination">
-    <a href="#">&laquo;</a>
-    <a href="#">1</a>
-    <a href="#" class="active">2</a>
-    <a href="#">3</a>
-    <a href="#">&raquo;</a>
+    {% if place.has_previous %}
+    <a href="?page={{place.previous_page_number}}">&laquo;</a>
+    {% endif %}
+
+    {% for i in place.paginator.page_range %}
+      {% if place.number == i %}
+        <a href="#" class="active">{{i}}</a>
+    
+      {% else %}
+        <a href="?page={{i}}" >{{i}}</a>
+     {% endif %}
+    {% endfor %}
+    {% if place.has_next %}
+    <a href="?page={{place.next_page_number}}">&raquo;</a>
+    {% endif %}
   </div>
+  {% endif %}
 </div>
 
 

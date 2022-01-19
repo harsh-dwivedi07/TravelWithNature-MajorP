@@ -74,85 +74,102 @@
           <!-- main slider carousel items -->
           <div class="carousel-inner">
               <div class="active item carousel-item" data-slide-number="0">
-                  <img src="{% static 'images/main-photo-3.jpg' %}" class="img-fluid" alt="slider-car">
+                  <img src="{{ single_page.place_mainimg.url }}" class="img-fluid" alt="slider-car">
               </div>
+              {% if single_page.place_img1 %}
               <div class="item carousel-item" data-slide-number="1">
-                  <img src="{% static 'images/main-photo.jpeg' %}" class="img-fluid" alt="slider-car">
+                  <img src="{{ single_page.place_img1.url }}" class="img-fluid" alt="slider-car">
               </div>
+              {% endif %}
+              {% if single_page.place_img2 %}
               <div class="item carousel-item" data-slide-number="2">
-                  <img src="{% static 'images/main-photo-2.jpg' %}" class="img-fluid" alt="slider-car">
+                  <img src="{{ single_page.place_img2.url }}" class="img-fluid" alt="slider-car">
               </div>
+              {% endif %}
+              {% if single_page.place_img3 %}
               <div class="item carousel-item" data-slide-number="4">
-                  <img src="{% static 'images/main-photo-3.jpg' %}" class="img-fluid" alt="slider-car">
+                  <img src="{{ single_page.place_img3.url }}" class="img-fluid" alt="slider-car">
               </div>
+              {% endif %}
+              {% if single_page.place_img4 %}
               <div class="item carousel-item" data-slide-number="5">
-                  <img src="{% static 'images/main-photo-3.jpg' %}" class="img-fluid" alt="slider-car">
+                  <img src="{{ single_page.place_img4.url }}" class="img-fluid" alt="slider-car">
               </div>
+              {% endif %}
           </div>
           <!-- main slider carousel nav controls -->
           <div class="carousel-indicators-section clearfix">
               <ul class="carousel-indicators car-properties list-inline nav nav-justified">
                   <li class="list-inline-item active">
                       <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#carDetailsSlider">
-                          <img src="{% static 'images/main-photo-3.jpg' %}" class="img-fluid" alt="small-car">
+                          <img src="{{ single_page.place_mainimg.url }}" class="img-fluid" alt="small-car">
                       </a>
                   </li>
+                  {% if single_page.place_img1 %}
                   <li class="list-inline-item">
                       <a id="carousel-selector-1" data-slide-to="1" data-target="#carDetailsSlider">
-                          <img src="{% static 'images/main-photo.jpeg' %}" class="img-fluid" alt="small-car">
+                          <img src="{{ single_page.place_img1.url }}" class="img-fluid" alt="small-car">
                       </a>
                   </li>
+                  {% endif %}
+                  {% if single_page.place_img2 %}
                   <li class="list-inline-item">
                       <a id="carousel-selector-2" data-slide-to="2" data-target="#carDetailsSlider">
-                          <img src="{% static 'images/main-photo-2.jpg' %}" class="img-fluid" alt="small-car">
+                          <img src="{{ single_page.place_img2.url }}" class="img-fluid" alt="small-car">
                       </a>
                   </li>
+                  {% endif %}
+                  {% if single_page.place_img3 %}
                   <li class="list-inline-item">
                       <a id="carousel-selector-3" data-slide-to="3" data-target="#carDetailsSlider">
-                          <img src="{% static 'images/main-photo-3.jpg' %}" class="img-fluid" alt="small-car">
+                          <img src="{{ single_page.place_img3.url }}" class="img-fluid" alt="small-car">
                       </a>
                   </li>
+                  {% endif %}
+                  {% if single_page.place_img4 %}
                   <li class="list-inline-item">
                       <a id="carousel-selector-4" data-slide-to="4" data-target="#carDetailsSlider">
-                          <img src="{% static 'images/main-photo-3.jpg' %}" class="img-fluid" alt="small-car">
+                          <img src="{{ single_page.place_img4.url }}" class="img-fluid" alt="small-car">
                       </a>
                   </li>
+                  {% endif %}
               </ul>
           </div>
         </div>
             <br><br>
         <div class="Destination_info_content">
-          <h1>Welcome to Travel</h1>
+          <h1>{{single_page.place_name}}</h1>
+          <p>{{single_page.place_city}},{{single_page.place_state}}</p>
           <br>
-          <h3>Ut velit est quam dolor ad a aliquid qui aliquid. <br>Sequi ea ut et est quaerat sequi nihil ut aliquam.
-            Occaecati alias dolorem mollitia ut. <br>Similique ea voluptatem. Esse doloremque accusamus
-            repellendus deleniti vel. <br>Minus et tempore modi architecto.</h3>
+          <h5>
+            {{single_page.place_desc}}
+          </h5>
         </div>
       </div>
       <div class="CouchSurfing_info">
         <table>
 
             <tr >
-              <img src="{% static 'images/ourvission-2.jpg' %}" alt="">
+              <img src="{% static 'images/default cs.jpg' %}" alt="">
             </tr>
 
             <tr >
-              <td>NAME</td>
+              <td>NAME : N/A</td>
             </tr>
             <tr>
-              <td>GENDER</td>
+              <td>GENDER : N/A</td>
             </tr>
             <tr>
-              <td>PHONE NUMBER</td>
+              <td>PHONE NUMBER : N/A</td>
             </tr>
             <tr>
-              <td>ADDRES</td>
+              <td>ADDRES : N/A</td>
             </tr>
             <tr>
-              <td>CITY</td>
+              <td>CITY : N/A</td>
             </tr>
             <tr>
-              <td>PROFESSION</td>
+              <td>PROFESSION : N/A</td>
             </tr>
 
         </table>

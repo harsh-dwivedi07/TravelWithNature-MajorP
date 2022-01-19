@@ -100,9 +100,7 @@ height: 700px;
   justify-content: center;
   padding: 5%;
 }
-.Destination .Destination_detail{
 
-}
 .Destination .Destination_detail .Destination_info{
   width:700px;
   height:1000px;
@@ -600,7 +598,7 @@ height: 700px;
 }
 /** Carousel indicators section start **/
 .carousel-indicators-section{
-  background: red;
+  background: white;
   display: inline-block;
   width: 100%;
 }
