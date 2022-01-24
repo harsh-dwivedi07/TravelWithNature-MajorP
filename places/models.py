@@ -73,3 +73,13 @@ class placing(models.Model):
     cs_address=  models.CharField(max_length=100,blank=True)
     cs_proff=  models.CharField(max_length=100,blank=True)
     created_date=models.DateTimeField(default=datetime.now,blank=True)
+
+
+class Comment(models.Model):
+    cur=models.ForeignKey(placing, related_name="comments",on_delete=models.CASCADE )
+    name=models.CharField(max_length=150)
+    body=models.TextField()
+    date_added=models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '%s - %s' %(self.cur.place_name,self.name)

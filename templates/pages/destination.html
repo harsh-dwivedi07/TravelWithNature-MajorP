@@ -55,9 +55,9 @@
   <div class="place-background">
     <div class="place-background-content">
       <h1>Welcome to Travel with Nature</h1>
-      <p>Ut velit est quam dolor ad a aliquid qui aliquid. <br>Sequi ea ut et est quaerat sequi nihil ut aliquam.
-        Occaecati alias dolorem mollitia ut. <br>Similique ea voluptatem. Esse doloremque accusamus
-        repellendus deleniti vel. <br>Minus et tempore modi architecto.</p>
+      <br/>
+      <p>“A village is a living organic entity, with blood flowing through its veins,<br/> and with a definite pulse and heartbeat.
+        <br/> It has its own distinct personality and its own dark caustic humour.” <br/>– Leonardo Donofrio</p>
     </div>
 
   </div>
@@ -174,8 +174,37 @@
 
         </table>
       </div>
+      
     </div>
+    <hr>
+    <br/> 
+      <h2>    Comments!!!</h2>
+      {% if user.is_authenticated %}
+     
+        {% if not single_page.comments.all %}
+        
+            No Comments yet....<a href="{% url 'add_comment' single_page.id %}">Add one</a>
+        {% else %}
+        Want Add a new Comment.....<a href="{% url 'add_comment' single_page.id %}">Add one</a>
+        <br/><br/>
+            {%for comment in single_page.comments.all %}
+              <strong>
+                
+                {{comment.name}}-{{comment.date_added}} 
+
+              </strong>
+              <br/>
+              {{comment.body}}
+              <br />
+            {% endfor %}
+        {% endif %}
+      {% else %}
+      <p>Login to add Comments!!</p>
+      {% endif %}
+      <br/>
   </div>
+
+  
 
 
   <!-- footer -->
