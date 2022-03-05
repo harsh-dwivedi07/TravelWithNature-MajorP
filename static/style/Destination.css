@@ -76,7 +76,7 @@ height: 700px;
 
 
 .place-background .place-background-content{
-  color: white;
+  color: #D0F0C0;
   text-align: center;
   padding-top: 20%;
 
@@ -103,8 +103,8 @@ height: 700px;
 
 .Destination .Destination_detail .Destination_info{
   width:700px;
-  height:1000px;
-  background-color:white;
+  height:auto;
+  background-color:#D0F0C0;
 
 
 
@@ -126,8 +126,8 @@ height: 700px;
 }
 .Destination .Destination_detail .CouchSurfing_info{
   width:400px;
-  height:1000px;
-  background-color: #99A799;
+  height:auto;
+  background-color: #90EE90;
   /* text-align: center; */
   padding: 3%;
 
@@ -598,7 +598,7 @@ height: 700px;
 }
 /** Carousel indicators section start **/
 .carousel-indicators-section{
-  background: white;
+  background: #D0F0C0;
   display: inline-block;
   width: 100%;
 }
@@ -634,4 +634,21 @@ height: 700px;
   margin-left: initial;
   margin-top: 0;
   position: relative;
+}
+.Comments{
+  padding-left: 15%;
+}
+.scroll-bg{
+  background-color: #D0F0C0;
+  width: 1000px;
+}
+.scroll-div{
+  width: 1000px;
+  height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.scroll-object{
+  color: black;
+  padding-left: 10px;
 }

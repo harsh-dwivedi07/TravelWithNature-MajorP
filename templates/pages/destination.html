@@ -146,13 +146,36 @@
           </h5>
         </div>
       </div>
+      
       <div class="CouchSurfing_info">
         <table>
-
+          {% if single_page.cs_available %}
             <tr >
               <img src="{% static 'images/default cs.jpg' %}" alt="">
             </tr>
 
+            <tr >
+              <td>NAME : {{single_page.cs_name}}</td>
+            </tr>
+            <tr>
+              <td>GENDER : {{single_page.cs_gender}}</td>
+            </tr>
+            <tr>
+              <td>PHONE NUMBER : {{single_page.cs_number}}</td>
+            </tr>
+            <tr>
+              <td>ADDRES : {{single_page.cs_address}}</td>
+            </tr>
+            <tr>
+              <td>CITY : {{single_page.place_city}}</td>
+            </tr>
+            <tr>
+              <td>PROFESSION : {{single_page.cs_proff}}</td>
+            </tr>
+            {% else %}
+            <tr >
+              <img src="{% static 'images/default cs.jpg' %}" alt="">
+            </tr>
             <tr >
               <td>NAME : N/A</td>
             </tr>
@@ -171,22 +194,32 @@
             <tr>
               <td>PROFESSION : N/A</td>
             </tr>
-
+            {% endif %}
         </table>
       </div>
       
     </div>
     <hr>
     <br/> 
-      <h2>    Comments!!!</h2>
+    <div class="Comments">
+    <h2>   Comments!!!</h2>
+    {% if user.is_authenticated %}
+    <strong>Want Add a new Comment.....<a href="{% url 'add_comment' single_page.id %}">Add one</a></strong>
+    {% endif  %}
+    <br/>
+    <br/>
+    <div class="scroll-bg">
+      <div class="scroll-div">
+        <div class="scroll-object">
+      
       {% if user.is_authenticated %}
      
         {% if not single_page.comments.all %}
         
             No Comments yet....<a href="{% url 'add_comment' single_page.id %}">Add one</a>
         {% else %}
-        Want Add a new Comment.....<a href="{% url 'add_comment' single_page.id %}">Add one</a>
-        <br/><br/>
+        
+      
             {%for comment in single_page.comments.all %}
               <strong>
                 
@@ -194,16 +227,21 @@
 
               </strong>
               <br/>
-              {{comment.body}}
+              >>>>{{comment.body}}
               <br />
+              <br/>
             {% endfor %}
         {% endif %}
       {% else %}
-      <p>Login to add Comments!!</p>
+      <p>Login to add and read Comments about this place!</p>
       {% endif %}
       <br/>
+      </div>
+      </div>
+      </div>
+    </div>
   </div>
-
+<br/>
   
 
 
