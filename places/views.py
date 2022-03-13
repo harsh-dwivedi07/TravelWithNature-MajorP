@@ -6,6 +6,8 @@ from places.models import placing,Comment
 from django.core.paginator import EmptyPage,PageNotAnInteger,Paginator
 from django.views.generic import ListView, DetailView, CreateView
 from .forms import CommentForm
+from .prediction import sentiment_analysis
+analysis="Neutral"
 # Create your views here.
 def places(request):
     place=placing.objects.all()
@@ -16,10 +18,10 @@ def places(request):
 
 def destination(request,id):
     single_page= get_object_or_404(placing, pk=id)
-    #print(placing.comments.all)
+    print()
     data={
         'single_page':single_page,
-        
+        'analysis':analysis,
     }
     return render(request,'pages/destination.html',data)
 
@@ -31,5 +33,6 @@ class AddCommentView(CreateView):
     def form_valid(self, form):
         form.instance.cur_id=self.kwargs['id']
         form.instance.name=self.request.user
+        form.instance.analy=sentiment_analysis(form.instance.body)
         return super().form_valid(form)
     success_url = reverse_lazy('home')

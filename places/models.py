@@ -80,6 +80,6 @@ class Comment(models.Model):
     name=models.CharField(max_length=150)
     body=models.TextField()
     date_added=models.DateTimeField(auto_now_add=True)
-
+    analy=models.CharField(max_length=100,default='Neutral')
     def __str__(self):
         return '%s - %s' %(self.cur.place_name,self.name)
